@@ -1,6 +1,7 @@
 import React from 'react';
 import './TodoForm.css'
 import { useForm } from "react-hook-form";
+import 'react-toastify/dist/ReactToastify.css';
 
 const TodoForm = () => {
     const { register, handleSubmit } = useForm();
@@ -19,10 +20,10 @@ const TodoForm = () => {
         })
         .then(res => res.json())
         .then(result => {
-            console.log(result);
+            console.log(result);   
+            window.location.reload();
         })
 
-        window.location.reload();
     }
     return (
         <div>
@@ -39,6 +40,7 @@ const TodoForm = () => {
                     <input type="submit" value={"Add Todo"} />
                 </div>
             </form>
+            
         </div>
     );
 };
