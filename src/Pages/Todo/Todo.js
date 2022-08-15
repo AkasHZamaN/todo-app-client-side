@@ -9,7 +9,7 @@ const Todo = ({ todo }) => {
   const deleteTodo = id =>{
     const proceed = window.confirm('Are You Sure?');
     if(proceed){
-      const url = `http://localhost:5000/todos/${id}`;
+      const url = `https://stark-crag-91352.herokuapp.com/todos/${id}`;
       fetch(url, {
         method: 'DELETE'
       })

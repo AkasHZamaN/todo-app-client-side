@@ -9,7 +9,7 @@ const TodoForm = () => {
     const postTodos = (data,event) => {
         console.log(data);
 
-        const url = `http://localhost:5000/todos`
+        const url = `https://stark-crag-91352.herokuapp.com/todos`
         fetch(url, {
             method: 'POST',
             headers: {
